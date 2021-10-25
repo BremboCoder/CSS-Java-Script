@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>BMI Calculator</title>
+  <!-- Ibrahim Ouenzar 5/5/2021
+		 Assignment 4, program 2 : BMI Calculator
+		 get the value of text boxe id's 'feet' and 'inches' and convert to inches
+     get the value entred by user from the weight text box id 'weight'
+     calculate BMI using the formula BMI = Weight * (703/height^2)
+     write result of the calculation into text box id 'bmi'
+		 -->
+  <script>
+    //function definition
+    function BMI_form() {
+      //get height values using text box id 'feet' convert it to inces then add it to the inches value from text box 'inches'
+      var feet = parseInt(document.getElementById("feet").value);
+      var inches = parseInt(document.getElementById("inches").value);
+      var height = (feet * 12) + inches;
+      //get weight value using text box id 'weight'
+      var weight = parseInt(document.getElementById("weight").value);
+      // formula to calculate BMI
+      var bmi = weight * (703 / (height * height));
+      // write the bmi value into the text box id bmi
+      document.getElementById("bmi").value = bmi.toFixed(1);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>BMI Calculator</h1>
+  <form id="form01">
+    <strong>Height:</strong>
+    <input type="text" id="feet" name="feet" size="2" />feet
+    <input type="text" id="inches" name="inches" size="2" /> inches
+    <br> <br>
+    <strong>Weight: </strong>
+    <input type="text" id="weight" name="weight" size="3" /> pounds
+    <br> <br>
+    <input type="button" value="Calculate BMI" onclick="BMI_form()" />
+    <input type="reset" value="Clear" />
+    <br> <br>
+    BMI: <input id="bmi" name="bmi" type="text" size="10" readonly>
+
+  </form>
+
+  <h3>BMI Categories:</h3>
+  <ul>
+    <li>Underweight = &lt;18.5</li>
+    <li>Normal weight = 18.5–24.9</li>
+    <li>Overweight = 25–29.9</li>
+    <li>Obesity = BMI of 30 or greater</li>
+  </ul>
+
+</body>
+
+
+</html>

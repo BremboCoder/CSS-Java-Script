@@ -1,0 +1,49 @@
+<html>
+<!--    Ibrahim Ouenzar
+        Area of Triangles 
+        Request from user base and height of 2 triangles
+        Calculate the area of each triangle then tell wich one is biger or if they are the same
+    -->
+
+<head>
+    <title>Area of Triangles</title>
+</head>
+
+<body>
+    <h1>Triangles Area Calculator and comparaison</h1>
+    <script>
+
+        // request the user to enter the height value of triangle 1 in the same time declare as variable and Integrer
+        var ht1 = parseInt(prompt("Enter the Height of triangle 1", "1"));
+        // request the user to enter the base value of triangle 1 in the same time declare as variable and Integrer
+        var base1 = parseInt(prompt("Enter the base of triangle 1", "1"));
+        // request the user to enter the height value of triangle 2 in the same time declare as variable and Integrer
+        var ht2 = parseInt(prompt("Enter the Height of triangle 2", "1"));
+        // request the user to enter the base value of triangle 2 in the same time declare as variable and Integrer
+        var base2 = parseInt(prompt("Enter the base of triangle 2", "1"));
+
+        // calculate the area of triangle 1
+        var area1 = ((ht1 * base1) / 2);
+        // calculate the area of triangle 2
+        var area2 = ((ht2 * base2) / 2);
+
+
+        // create a Decision structure to get the largest area to be written on the screen
+        if (area1 > area2) {
+            document.write("Triangle 1 Area is bigger than Triangle 2 Area<br />");
+
+        }
+        else if (area1 < area2) {
+            document.write("Triangle 2 Area is bigger than Triangle 1 Area<br />");
+
+        }
+        else if (area1 = area2) {
+            document.write("Both triangles have same Area<br />");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+<!--    Ibrahim Ouenzar
+        Multi-way structures - Shipping charges
+        Request from user to enter the weight of the package to be shipped
+        code a multi way structure to use the right shipping rate depending on the weight
+    -->
+
+<head>
+    <title>Shipping charges</title>
+</head>
+
+<body>
+    <h1>Shipping charges calculator</h1>
+    <script>
+        //request from the user to enter the weight of the package, declare the variable and integrer  
+        var packageWeight = parseInt(prompt("Enter the weight of the package you are shipping", "1"));
+        //Declare the Rate as variable
+        var poundRate;
+
+        //design a multi-way structure to use the correct rate depending on the weight entered by the user
+        if (packageWeight >= 10) {
+            poundRate = 3.8;
+        }
+        else if (packageWeight >= 6) {
+            poundRate = 3.7;
+        }
+        else if (packageWeight >= 2) {
+            poundRate = 2.2;
+        }
+        else {
+            poundRate = 1.1;
+        }
+        //after collecting the weight from user and determine thr correct rate to use then we calculate the shipping charge
+        var shipCharge = packageWeight * poundRate;
+        //display the shipping charge on the screen
+        document.write("Your shipping charge is:  $" + shipCharge.toFixed(2));
+
+    </script>
+</body>
+
+</html>

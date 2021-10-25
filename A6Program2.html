@@ -1,0 +1,59 @@
+<html>
+<!-- Ibrahim Ouenzar
+        Assignment 6 program 2 Pennies for Pay
+        This program will generate a table with 2 rows:
+        first row for number of days worked and second row for day pay
+        then sum the total amount and show it on the screen
+    -->
+
+<head>
+    <title>Pennies for Pay</title>
+</head>
+
+<body>
+    <h1>Pennies for Pay</h1>
+    <!--Start creating two lines for our table as they are always the same   -->
+    <table border="2">
+        <caption>Pay per day worked and Total Pay</caption>
+        <tr>
+            <th>Day #</th>
+            <th>Day Pay</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>$0.01</td>
+        </tr>
+       
+        <!-- program that request the number of days worked then create a dynamic table filled with the day number in 1st row 
+        then the pay day in 2nd row -->
+        <script>
+            //request the number of day worker and declare the variable as integrer
+            var numberDays = parseInt(prompt("Enter the number of days worked ", "1"));
+            // 2 accumulator variables For Total Pay and Pay per Day worked
+            var totalPay = 0.01; 
+            var dayPay = 0.01;
+            // loop that generate the table and fill it with the number of days worked in 1st row then the pay day that double each day
+            for (var num = 2; num <= numberDays; num++) {
+                // formula to double the pay day
+                dayPay = dayPay * 2;
+                //write the html table structure depending on the number of day worked
+                document.write("<tr>");
+                // fill the row with the day number
+                document.write("<td>" + num + "</td>");
+                // fill the row with the pay day
+                document.write("<td> $" + dayPay + "</td>");
+                document.write("</tr>");
+                // formula to calculate the total Pay
+                totalPay +=  dayPay ;
+
+            }
+        </script>
+    </table>
+    <script>
+        // write the total Amout of pay after the table
+        document.write("<p>The total amout is  $" + totalPay.toFixed(2) + "</p>");
+
+    </script>
+</body>
+
+</html>

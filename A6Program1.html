@@ -1,0 +1,39 @@
+<html>
+<!-- Ibrahim Ouenzar
+        Assignment 6 program 1 Centigrade to Fahrenheit Dynamic Table
+        This program will generate a table with 2 rows:
+        first row for Celsius and second row for Fahrenheit equivalent
+    -->
+
+<head>
+    <title>Celsius to Fahrenheit Dynamic Table </title>
+</head>
+
+<body>
+    <h1>Celsius to Fahrenheit Dynamic Table </h1>
+    <!--start the table and defining border and width plus a table caption to appear on the top  --> 
+    <table border="1" width="180">
+        <caption align="top"> Celsius to Fahrenheit </caption>
+        <!-- Generate first line of the table as it contain title for the rows-->
+        <tr>
+            <th> Celsius </th>
+            <th> Fahrenheit </th>
+        </tr>
+        <!--javascript using a confition loop to generate the rows automaticlly until the var c reach the value 20 with increment of 1-->
+        <script>
+            for (var c = 0; c <= 20; c +=1) {
+                // formula to convert Celsius to Fahrenheit
+                var f = ((9/5)*c) + 32
+                // as long as the condition is true the table keep being generated with the values of Celsius in 1st row and  
+                // value of Fahrenheit in 2nd row
+                document.write("<tr>");
+                document.write("<td>" + c + "</td>");
+                document.write("<td>" + f.toFixed(1) + "</td>");
+                document.write("</tr>");
+            }
+
+        </script>
+    </table>
+</body>
+
+</html>

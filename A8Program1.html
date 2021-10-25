@@ -1,0 +1,66 @@
+<html>
+<!-- Ibrahim Ouenzar
+        Assignment number 8 Program 1 Series of Integers
+        Program that ask user to enter positive and negative integers, with a request to continue or not, 
+        then use a loop to output first negative and their sum, then output all positives and their sum.
+    -->
+
+<head>
+    <title>Series of Integers</title>
+    <script>
+        // defining all variable needed
+        var numbers = new Array();
+        var more;
+        var numneg = 0 ;
+        var numpos = 0 ;
+        var totalneg=0 ;
+        var totalpos=0 ;
+        var i = 0;
+        // do while to have the prompt asking if the user need more data to enter
+        do {
+            numpos = parseInt(prompt("Enter a positive integer number please", ""));
+            numneg = parseInt(prompt("Enter a negative integer number please", ""));
+            numbers[i] = numpos;
+            numbers[i] = numneg;
+            i++;
+            more = confirm("One more number?");
+        } while (more == true);
+
+        // calculating total of negative numbers entred by user
+            totalneg += numbers[i]
+        
+        // calculating total of positive numbers entred by user
+            totalpos += numbers[i]
+        
+        //write this sentance to the webpage
+        document.write("You Entred the following negative integers: ");
+        
+        // loop to write the negative numbers entred by user
+        for (i = 0; i < numbers.length; ++i) {
+
+            document.write(numneg, "<br>");
+        }
+        // write the total of negative numbers entred by user
+        document.write("The sum of all negative integers is: " + totalneg+ "<br>")
+        //write this sentance to the webpage
+        document.write("You Entred the following positive integers: ");
+        // loop to write the positive numbers entred by user
+        for (i = 0; i < numbers.length; ++i) {
+
+            document.write(numpos, "<br>");
+        }
+        // write the total of positive numbers entred by user
+        document.write("The sum of all negative integers is: " + totalpos+ "<br>")
+
+    </script>
+
+</head>
+
+<body>
+    <script>
+
+
+    </script>
+</body>
+
+</html>

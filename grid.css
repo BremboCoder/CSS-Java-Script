@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(220,255,225);
+}
+div {
+    background-color: aqua;
+}
+
+basicGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(145,200,225);
+    grid-gap: 1.5em;
+    padding: 20px;
+    grid-template-rows: 200px 200px;
+    
+}
+.gridChild {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(15,20,225, .7);
+}
+
+/* -------- second grid area -------- */
+
+.grid2 { 
+    background-color: rgb(245, 125,200);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto); 
+    
+}
+
+.grid

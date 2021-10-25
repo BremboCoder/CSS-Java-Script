@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title> Trapezoidal Prism Volume Calculator</title>
+    <!-- Ibrahim Ouenzar
+       Assignment 2 program 3
+       ask the user to enter Length (L), Height (H), Base Width (P) and Top Width (Q).
+       Then outputs a paragraph with the prism Volume (V) 
+       Then ouput all measurments and the volume to the page
+       Then reduce all four measurements by 25% to calculate the volume with new values
+       Then output reduced measurements and reduced volume to the page-->
+</head>
+
+<body>
+
+    <h2>Trapezoidal Prism Volume</h2>
+    <script>
+
+        // Javascript program to input all measurments in variables 
+        //then calculate the volume 
+        //then output all value to the page
+
+        // Input measurments of the prism 
+        var L = parseFloat(prompt(" Enter the Length "));
+        var H = parseFloat(prompt(" Enter the Height "));
+        var P = parseFloat(prompt(" Enter the Base Width "));
+        var Q = parseFloat(prompt(" Enter the Top Width "));
+
+        // Formula to calculate the prism Volume (V)
+        var V = (L * H * ((P + Q) / 2));
+
+        // Output the measurments and Volume value
+        document.write("Length ( L ) = " + (L) + "<br>");
+        document.write("Height ( H ) = " + (H) + "<br>");
+        document.write("Base Width ( P ) = " + (P) + "<br>");
+        document.write("Top Width ( Q ) = " + (Q) + "<br>");
+        document.write("Prism Volume ( V ) = " + (V) + "<br>");
+    </script>
+    <br>
+    <h2>Trapezoidal Prism Volume reduced by 25%</h2>
+    <script>
+        // Reduce all measurments by 25%
+        LM = (L * 0.75);
+        HM = (H * 0.75);
+        PM = (P * 0.75);
+        QM = (Q * 0.75);
+
+        // Formula to calculate the prism Volume with 25% reduced measurments (VM)
+        VM = (LM * HM * ((PM + QM) / 2));
+
+        // Output the reduced measurments and reduced Volume value
+        document.write("Length - 25% ( LM ) = " + (LM) + "<br>");
+        document.write("Height - 25% ( HM ) = " + (HM) + "<br>");
+        document.write("Base Width - 25% ( PM ) = " + (PM) + "<br>");
+        document.write("Top Width - 25% ( QM ) = " + (QM) + "<br>");
+        document.write("Reduced Prism Volume  ( VM ) = " + (VM) + "<br>");
+    </script>
+</body>
+
+</html>

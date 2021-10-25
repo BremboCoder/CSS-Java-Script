@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Fahrenheit to Celsius Converter</title>
+	<meta charset="utf-8">
+	<!-- Ibrahim Ouenzar 5/5/2021
+		 Assignment 4, program 1 : Fahrenheit to Celsius Form Converter
+		 geting the Fahrenheit value from the text box 'fahr', 
+		 convert it to Celsius and write the result in the text box 'cel'
+		 call inline the function with the onclick using the value of the Calculate Celsius button
+		 -->
+	<script>
+		//function definition
+		function FC_form() {
+			//get fahrenheit value using text box id farh
+			var fahr = parseInt(document.getElementById("fahr").value);
+			// formula to convert from Fahrenheit to Celsius
+			var c = (5 / 9) * (fahr - 32);
+			// write the celsius value into the text box id cel
+			document.getElementById("cel").value = "°C " + c.toFixed(2);
+		}
+	</script>
+</head>
+
+<body>
+	<h3>Fahrenheit to Celsius Converter </h3>
+	<form id="FCform">
+		Enter temperature in Fahrenheit: <input type="text" id="fahr" name="fahr" size="10" />
+		<br><br>
+
+		<input type="button" id="button1" value="Calculate Celsius" onclick="FC_form()" />
+		<input type="reset" value="Clear" />
+
+		<br><br>
+		Temperature in Celcius is: <input id="cel" name="cel" type="text" size="10" readonly />
+
+	</form>
+</body>
+
+</html>
